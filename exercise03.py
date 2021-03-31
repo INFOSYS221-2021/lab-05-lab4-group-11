@@ -1,7 +1,10 @@
 # Exercise Three
 # Write a simple program that finds the number of digits of a given integer value
 def numDigits(n):
-  return len(str(abs(n)))
+  n = str(n)
+  n = n.replace("-", "")
+  n = n.replace(".", "")
+  return len(n)
 
-ans = numDigits(-1007849)
+ans = numDigits(-100.12)
 print(ans)
